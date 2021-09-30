@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './modules';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 // 리듀서를 합친 루트 리듀서를 담는 스토어 생성
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <React.StrictMode>
