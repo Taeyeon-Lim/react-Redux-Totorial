@@ -62,4 +62,26 @@ function reducer(state = initialState, action) {
 
 // 스토어 생성
 const store = createStore(reducer);
-console.log(store.getState());
+console.log('스토어 확인', store.getState());
+
+// 스토어 리스너
+const listener = () => {
+  // 스토어 직접 호출(getState)
+  const state = store.getState();
+  console.log(state);
+};
+
+const unsubscribe = store.subscribe(listener);
+// unsubscribe;
+
+store.dispatch(increase());
+store.dispatch(decrease());
+store.dispatch(changeText('텍스트 변경!'));
+store.dispatch(addToList({ id: 1, text: '리스트 추가' }));
+
+// 콘솔에서 store 인스턴스 사용
+// store.getState()
+// store.dispatch({ type: 'DECREASE' })
+// store.dispatch({ type: 'ADD_TO_LIST', item: { id: 2, text: '텍스트 2' }});
+window.store = store;
+window.unsubscribe = unsubscribe;
