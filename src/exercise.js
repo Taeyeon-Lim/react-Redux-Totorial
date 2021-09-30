@@ -52,8 +52,8 @@ function reducer(state = initialState, action) {
     case ADD_TO_LIST:
       return {
         ...state,
-        list: state.list.concat(action.item),
-        // list: [state.list, action.item],
+        // list: state.list.concat(action.item),
+        list: [...state.list, action.item],
       };
     default:
       return state;
