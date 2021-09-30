@@ -7,12 +7,16 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './modules';
 
+// 리듀서를 합친 루트 리듀서를 담는 스토어 생성
 const store = createStore(rootReducer);
 console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* 리액트에서 스토어 연동 */}
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

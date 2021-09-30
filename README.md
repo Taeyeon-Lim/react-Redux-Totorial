@@ -22,3 +22,20 @@ yarn add redux
   > 대부분의 actions, reducer는 하나의 짝으로 함께 동작한다
   >
   > > 따라서, **모듈(액션 타입 + 액션 생성 함수 + 리듀서)들을 한 곳에서 하나의 모듈로 관리하자!**
+  > > ducks는 3가지 주의점이 존재
+  > >
+  > > 1.  다른 모듈과 이름이 중복 되지 않도록, 액션 이름 앞에 **접두사**를 붙이는 것<br/>(ex. /counter/ADD_COUNT)
+  > > 2.  모든 액션 생성 함수를 **export**할 것
+  > > 3.  리듀서 함수는 **export default**를 사용할 것
+
+<br/>
+
+---
+
+## 리액트에서 redux 사용하기
+
+- install react-redux
+
+```javaScript
+yarn add react-redux
+```
