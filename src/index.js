@@ -9,7 +9,6 @@ import rootReducer from './modules';
 
 // 리듀서를 합친 루트 리듀서를 담는 스토어 생성
 const store = createStore(rootReducer);
-console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>

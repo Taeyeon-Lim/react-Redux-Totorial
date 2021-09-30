@@ -39,3 +39,11 @@ yarn add redux
 ```javaScript
 yarn add react-redux
 ```
+
+- **컨테이너 컴포넌트와 프리젠테이셔널 컴포넌트**
+  <br>
+  > <img src="https://user-images.githubusercontent.com/54977412/135451815-19a30932-07e9-4655-ba28-68fa81d8e872.png" width="500px">
+  >
+  > 리덕스 창시자는 [컨테이너 컴포넌트] 와 [프리젠테이셔널 컴포넌트]를 분리해서 사용하는 방안을 제안했었으나,
+  > 현재는 훅이 있으니, 분리해서 사용하지 않아도 된다고 말하고 있으므로
+  > 편한 방법을 찾아서 사용하라고 했다
