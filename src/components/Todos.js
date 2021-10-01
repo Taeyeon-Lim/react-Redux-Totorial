@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // TodoList에서 id를 받아서 호출
-function TodoItem({ todo, onToggle }) {
+const TodoItem = React.memo(function TodoItem({ todo, onToggle }) {
   return (
     <li
       style={{ textDecoration: todo.done ? 'line-through' : 'none' }}
@@ -10,10 +10,10 @@ function TodoItem({ todo, onToggle }) {
       {todo.text}
     </li>
   );
-}
+});
 
 // 할 일 리스트
-function TodoList({ todos, onToggle }) {
+const TodoList = React.memo(function TodoList({ todos, onToggle }) {
   return (
     <ul>
       {todos.map(todo => (
@@ -22,7 +22,7 @@ function TodoList({ todos, onToggle }) {
       ))}
     </ul>
   );
-}
+});
 
 function Todos({ todos, onCreate, onToggle }) {
   // text 로컬 관리
@@ -51,4 +51,4 @@ function Todos({ todos, onCreate, onToggle }) {
   );
 }
 
-export default Todos;
+export default React.memo(Todos);
