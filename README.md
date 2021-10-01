@@ -75,5 +75,7 @@ const store = createStore(rootReducer, composeWithDevTools()); // 스토어 생�
 - **제안된 방법으로 투두-리스트 만들기**
 
   > 1. 프리젠테이셔널 컨포넌트 생성(components/todos.js)
+  > 2. 컨테이너 컴포넌트 생성(containers/TodosContainer.js)
+  > 3. 스토어의 디스패치 사용
 
 <br/><br/>

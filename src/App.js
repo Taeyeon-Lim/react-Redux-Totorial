@@ -1,7 +1,14 @@
-import CounterContainer from './contaniners/CounterContainer';
+import CounterContainer from './containers/CounterContainer';
+import TodosContainer from './containers/TodosContainer';
 
 function App() {
-  return <CounterContainer />;
+  return (
+    <div>
+      <CounterContainer />
+      <hr />
+      <TodosContainer />
+    </div>
+  );
 }
 
 export default App;
