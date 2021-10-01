@@ -77,7 +77,8 @@ const store = createStore(rootReducer, composeWithDevTools()); // 스토어 생�
   > 1. 프리젠테이셔널 컨포넌트 생성(components/todos.js)
   > 2. 컨테이너 컴포넌트 생성(containers/TodosContainer.js)
   > 3. 스토어의 디스패치 사용
-  >
-  > 투두-item이 불필요하게 렌더링 되므로, memo를 사용한 최적화
+  >    <br/>
+  >    > 투두-item이 불필요하게 렌더링 되므로, memo를 사용한 최적화  
+  >    > todos 변화 시, 필요없는 counter 렌더링에 3가지 방법 중 shallowEqual(얕은 비교)을 사용한 최적화
 
 <br/><br/>
