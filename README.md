@@ -69,3 +69,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(rootReducer, composeWithDevTools()); // 스토어 생성(2번째 인자에 추가)
 ```
+
+<br/>
+
+- **제안된 방법으로 투두-리스트 만들기**
+
+  > 1. 프리젠테이셔널 컨포넌트 생성(components/todos.js)
+
+<br/><br/>
